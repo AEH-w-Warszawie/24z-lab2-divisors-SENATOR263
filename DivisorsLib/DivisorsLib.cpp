@@ -4,10 +4,13 @@
 std::vector<unsigned long long> divisors(unsigned long long number)
 {
 	std::vector<unsigned long long> result;
-	for (unsigned long long i = 1; i <= number; ++i)
+	for (unsigned long long i = 1; i * i <= number; ++i)
 	{
 		if (number % i == 0)
-			result.push_back(i);
+			{result.push_back(i);
+		if (i != number / i)
+		result.pushback(number / i);
 	}
+	std::sort(result.begin(), result.end())
 	return result;
 }
